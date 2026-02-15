@@ -65,4 +65,15 @@ public class TaskController {
         var taskSaved = this.taskRepository.save(task);
         return ResponseEntity.status(HttpStatus.OK).body(taskSaved);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity delete(TaskModel taskModel, @PathVariable UUID id){
+        var task = this.taskRepository.findById(id);
+        if (task.isEmpty()){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Tarefa não encontrada");
+        }
+
+        this.taskRepository.deleteById(id);
+        return ResponseEntity.status(HttpStatus.OK).body("Tarefa Deletada");
+    }
 }
