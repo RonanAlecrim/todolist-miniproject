@@ -31,21 +31,6 @@ Este projeto foi desenvolvido como prática de backend utilizando conceitos de:
 
 -Hibernate
 
-📂 Estrutura do projeto
-todolist-mini-project
-│
-├── src/main/java
-│   ├── controllers
-│   ├── models
-│   ├── repositories
-│   └── config
-│
-├── src/main/resources
-│   └── application.properties
-│
-└── pom.xml
-
-
 ⚙️ Funcionalidades
 
 ✅ Criar tarefas
